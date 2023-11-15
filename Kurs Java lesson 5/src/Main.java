@@ -14,20 +14,13 @@ public class Main {
         double b = new Scanner(System.in).nextDouble();
 
         // Пришлось узнавать в интернете, как создавать условия. Equal сравнивает объект на равенство с введеным, работает только со String
-        if (symbol.equals("*")) {
-            System.out.println(a + " * " + b + " = " + (a * b));
-        }
-        else if (symbol.equals("/")) {
-            System.out.println(a + " / " + b + " = " + (a / b));
-        }
-        else if (symbol.equals("+")) {
-            System.out.println(a + " + " + b + " = " + (a + b));
-        }
-        else if (symbol.equals("-")) {
-            System.out.println(a + " - " + b + " = " + (a - b));
-        }
-        else {
-            System.out.println("Неверный символ операции, выберите одно из предложенных");
+        // Среда разработки исправила мой код, заменив if на switch, нужно разузнать про этот метод более подробно.
+        switch (symbol) {
+            case "*" -> System.out.println(a + " * " + b + " = " + (a * b));
+            case "/" -> System.out.println(a + " / " + b + " = " + (a / b));
+            case "+" -> System.out.println(a + " + " + b + " = " + (a + b));
+            case "-" -> System.out.println(a + " - " + b + " = " + (a - b));
+            default -> System.out.println("Неверный символ операции, выберите одно из предложенных");
         }
     }
 }
